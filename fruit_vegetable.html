@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>과일</title>
+    <link rel="stylesheet" href="css/fruit_vegetable.css" />
+    <script type="module" src="js/crossword.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jua&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .js #fouc {
+        display: none;
+      }
+    </style>
+    <script>
+      (function (H) {
+        H.className = H.className.replace(/\bno-js\b/, "js");
+      })(document.documentElement);
+    </script>
+  </head>
+  <body>
+    <!-- playground -->
+    <div class="playground">
+      <div id="sub__title">과일</div>
+      <div id="timer"><span>0</span>분<span>0</span>초</div>
+      <div class="crossword">
+        <!-- 퍼즐 부분 텍스트 -->
+        <div id="crossword__text">
+          <span>낱말 카드의 ? 부분을 클릭하여 퀴즈를 풀어주세요.</span>
+        </div>
+        <ul></ul>
+      </div>
+      <div class="description">
+        <!-- 설명 부분 텍스트 -->
+        <div id="description__title">
+          <span>낱말 카드를 클릭하면 가로세로 퀴즈가 시작됩니다.</span>
+        </div>
+        <div class="description__text hidden">
+          <span class="horikey__num">가로</span>
+          <button class="hint__Btn">힌트</button>
+        </div>
+        <!-- 가로 퀴즈 박스 -->
+        <div class="hori__keybox hidden">
+          <span class="hori__key"></span>
+          <input
+            type="text"
+            placeholder="정답을 입력해주세요."
+            class="answer__input"
+            maxlength="6"
+          />
+          <button class="answer__btn">정답</button>
+        </div>
+        <div class="description__text hidden">
+          <span class="vertikey__num">세로</span>
+          <button class="hint__Btn">힌트</button>
+        </div>
+        <!-- 세로 퀴즈 박스 -->
+        <div class="verti__keybox hidden">
+          <span class="verti__key"></span>
+          <input
+            type="text"
+            placeholder="정답을 입력해주세요."
+            class="answer__input"
+            maxlength="6"
+          />
+          <button class="answer__btn">정답</button>
+        </div>
+        <!-- 힌트 팝업 -->
+        <div class="popup__hint invisible">
+          <div class="popup__hint__text"></div>
+          <button class="popup__hint__btn">확인</button>
+        </div>
+      </div>
+      <!-- 정답,오답 팝업 -->
+      <div class="popup invisible">
+        <div class="popup__text">정답입니다!</div>
+        <button class="popup__btn">확인</button>
+      </div>
+      <div id="left__img"></div>
+      <div id="right__img"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crossword Quiz</title>
+    <link rel="stylesheet" href="css/mainpage.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jua&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/a088f742d0.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <script src="./js/main.js" defer></script>
+    <style>
+      .js #fouc {
+        display: none;
+      }
+    </style>
+    <script>
+      (function (H) {
+        H.className = H.className.replace(/\bno-js\b/, "js");
+      })(document.documentElement);
+    </script>
+  </head>
+  <body>
+    <section>
+      <!-- main page -->
+      <div id="mainpage">
+        <!-- navbar -->
+        <nav id="navbar">
+          <div id="navbar__left">
+            <button class="navbar__button" id="navbar__ranking">랭킹</button>
+          </div>
+          <div id="navbar__right">
+            <button class="navbar__button" id="navbar__loginout">로그인</button>
+          </div>
+          <div id="navbar__username" class="hidden"></div>
+        </nav>
+        <div id="logo__container">
+          <img
+            class="logo__img"
+            src="images/crossword_logo.png"
+            width="450px"
+            height="250px"
+          />
+        </div>
+
+        <div id="game__button__container">
+          <div id="text">
+            <h1>주제를 선택해주세요</h1>
+          </div>
+          <a
+            href="http://127.0.0.1:5500/toy_projects/%EC%9B%B9%EA%B0%9C%EB%B0%9C%20%ED%8C%80%ED%94%84/fruit_vegetable.html"
+            class="game__select"
+            ><img
+              class="game__select__img"
+              src="./images/button_img/fruit.png"
+              alt=""
+          /></a>
+          <a class="game__select"
+            ><img
+              class="game__select__img"
+              src="./images/button_img/school.png"
+              alt=""
+          /></a>
+          <a class="game__select"
+            ><img
+              class="game__select__img"
+              src="./images/button_img/animal.png"
+              alt=""
+          /></a>
+          <a class="game__select"
+            ><img
+              class="game__select__img"
+              src="./images/button_img/sea_creature.png"
+              alt=""
+          /></a>
+          <a class="game__select"
+            ><img
+              class="game__select__img"
+              src="./images/button_img/art.png"
+              alt=""
+          /></a>
+        </div>
+        <div id="popup" class="hidden">
+          <div id="loginbox">
+            <div id="loginbox__header">
+              <button id="close__btn">
+                <i class="fas fa-times"></i>
+              </button>
+              <h2>로그인</h2>
+            </div>
+            <div id="loginbox__body">
+              <form action="" id="form">
+                <fieldset>
+                  <div>
+                    <input
+                      type="text"
+                      id="id"
+                      placeholder="이름"
+                      maxlength="10"
+                      minlength="3"
+                    />
+                  </div>
+                  <div>
+                    <input
+                      type="password"
+                      id="password"
+                      placeholder="비밀번호"
+                      maxlength="20"
+                      minlength="8"
+                    />
+                  </div>
+                  <div>
+                    <button id="login__btn">로그인</button>
+                  </div>
+                </fieldset>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
